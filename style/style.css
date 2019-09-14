@@ -1,0 +1,53 @@
+
+#myContainer {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+canvas {
+    display: block;
+    width:100%;
+    height: 300px;
+    border: 1px solid black;
+    margin :auto auto;
+}
+#title {
+    margin-left: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#AlgoSelector {
+    display: inline-block;
+}
+
+#wrapper{
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+#divider {
+    width: 30px;
+    display: inline-block;
+}
+
+#complexixtyAnalysis {
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 30%;
+    height: 200px;
+}
+#description{
+    display: inline-block;
+    border:1px solid black;
+    width : 69%;
+    height : 200px;
+}
+#myCanvas {
+    height: 300px;
+}
+body {
+    background: #00ff55;
+}

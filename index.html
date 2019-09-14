@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="./library/p5.js"></script>
+    <script src="./library/p5.dom.js"></script>
+    <script src="./library/p5.sound.js"></script>
+    <script src="sortArray.js"></script>
+    <script src="emptyCanvas.js"></script>
+    <script src="bubbleSketch.js"></script>
+    <script src="insertionSketch.js"></script>
+    <script src="quickSketch.js"></script>
+    <script src="mergeSketch.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <div id="">
+      <h1 id="title">Algorithm Visualiser</h1>
+      <hr>
+      <div id = "wrapper">
+          <div id="AlgoSelector">
+              <button type = "button" onclick= "startBubble()">Bubble Sort</button>
+              <div id= "divider"></div>
+              <button type ="button" onclick="startInsertion()">Insertion Sort</button>
+              <div id= "divider"></div>
+              <button type ="button" onclick="startMerge()">Merge Sort</button>
+              <div id= "divider"></div>
+              <button type ="button" onclick="startQuick()">Quick Sort</button>
+          </div>
+      </div>  
+    </div>
+      <div id="myCanvas"></div>
+      <div id = "complexixtyAnalysis"></div> <div id ="description"></div>
+  </body>
+</html>
