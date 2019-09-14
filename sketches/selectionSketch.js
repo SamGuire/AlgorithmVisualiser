@@ -75,13 +75,3 @@ var sketchSelection = function(p){
                   }
               }
   }
-
-
-function startSelection(){
-for (let sortMethod of sortArray){
-  if (sortMethod){
-    sortMethod.remove()
-  }
-}
-sortArray[2] = new p5(sketchSelection)
-}

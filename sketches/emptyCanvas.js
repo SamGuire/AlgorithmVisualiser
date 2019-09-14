@@ -8,6 +8,6 @@ let emptyCanvas = function(p){
             }
         }
 
-sortArray[5] = new p5(emptyCanvas)
+
 
         

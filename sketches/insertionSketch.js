@@ -83,11 +83,3 @@ var sketchInsertion = function(p){
     }
   
 
-function startInsertion(){
-    for (let sortMethod of sortArray){
-        if (sortMethod){
-          sortMethod.remove()
-        }
-      }
-      sortArray[1] = new p5(sketchInsertion)
-}

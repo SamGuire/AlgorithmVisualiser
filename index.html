@@ -9,13 +9,21 @@
     <script src="./library/p5.js"></script>
     <script src="./library/p5.dom.js"></script>
     <script src="./library/p5.sound.js"></script>
-    <script src="sortArray.js"></script>
-    <script src="emptyCanvas.js"></script>
-    <script src="bubbleSketch.js"></script>
-    <script src="insertionSketch.js"></script>
-    <script src="selectionSketch.js"></script>
-    <script src="quickSketch.js"></script>
-    <script src="mergeSketch.js"></script>
+    <script src="./sketches/emptyCanvas.js"></script>
+    <script src="./sketches/bubbleSketch.js"></script>
+    <script src="./sketches/insertionSketch.js"></script>
+    <script src="./sketches/selectionSketch.js"></script>
+    <script src="./sketches/mergeSketch.js"></script>
+    <script src="./sketches/quickSketch.js"></script>
+    <script src="sketchChecker.js"></script>
+    <script>
+        function startSketching(sortMethod){
+          if (sketchPlaced){
+            sketchPlaced.remove()
+            sketchPlaced = new p5(sortMethod)
+          }
+      }
+  </script>
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
@@ -24,15 +32,15 @@
       <hr>
       <div id = "wrapper">
           <div id="AlgoSelector">
-              <button type="button" class="button" onclick= "startBubble()">Bubble Sort</button>
+              <button type="button" class="button" onclick= "startSketching(sketchBubble)">Bubble Sort</button>
               <div id= "divider"></div>
-              <button type="button" class="button" onclick="startInsertion()">Insertion Sort</button>
+              <button type="button" class="button" onclick="startSketching(sketchInsertion)">Insertion Sort</button>
               <div id= "divider"></div>
-              <button type="button" class="button"  onclick="startSelection()">Selection Sort</button>
+              <button type="button" class="button"  onclick="startSketching(sketchSelection)">Selection Sort</button>
               <div id= "divider"></div>
-              <button type="button" class="button"  onclick="startMerge()">Merge Sort</button>
+              <button type="button" class="button"  onclick="startSketching(sketchMerge)">Merge Sort</button>
               <div id= "divider"></div>
-              <button type="button" class="button" onclick="startQuick()">Quick Sort</button>
+              <button type="button" class="button" onclick="startSketching(sketchQuick)">Quick Sort</button>
           </div>
       </div>  
     </div>

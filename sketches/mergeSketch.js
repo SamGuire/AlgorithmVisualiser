@@ -107,11 +107,3 @@ var sketchMerge = function(p){
   }
 
 
-function startMerge(){
-  for (let sortMethod of sortArray){
-      if (sortMethod){
-        sortMethod.remove()
-      }
-    }
-    sortArray[3] = new p5(sketchMerge)
-}

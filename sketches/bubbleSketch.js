@@ -75,12 +75,9 @@ var sketchBubble = function(p){
     }
   
 
-function startBubble(){
-  for (let sortMethod of sortArray){
-    if (sortMethod){
-      sortMethod.remove()
-    }
+function start(sortMethod){
+  if (sketchPlaced){
+    sketchPlaced.remove()
+    sketchPlaced = new p5(sortMethod)
   }
-  sortArray[0] = new p5(sketchBubble)
- 
 }

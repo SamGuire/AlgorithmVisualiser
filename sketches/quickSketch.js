@@ -97,11 +97,3 @@ var sketchQuick = function(p){
   }
 
 
-function startQuick(){
-  for (let sortMethod of sortArray){
-      if (sortMethod){
-        sortMethod.remove()
-      }
-    }
-    sortArray[4] = new p5(sketchQuick)
-}

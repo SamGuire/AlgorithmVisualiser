@@ -1,0 +1,1 @@
+let sketchPlaced = new p5(emptyCanvas)
