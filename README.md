@@ -1,4 +1,4 @@
-#Algorithm Visualiser
+# Algorithm Visualiser
 
 A website that let's you visualiser different algorithms at different speeds.
 
