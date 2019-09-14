@@ -3,10 +3,10 @@ var sketchMerge = function(p){
     colored = Infinity
     let array = []
     let sorted = false
-    const barWidth = screen.width/50
+    const barWidth = 1000/50
 
     p.setup = function() {
-            canvas = p.createCanvas(screen.width,300)
+            canvas = p.createCanvas(1000,300)
             canvas.parent("myCanvas")
             for (let i = 1 ; i <=50 ; i++ ){
                   array.push(i)
