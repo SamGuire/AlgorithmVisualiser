@@ -8,6 +8,13 @@ var sketchMerge = function(p){
     p.setup = function() {
             canvas = p.createCanvas(1000,300)
             canvas.parent("myCanvas")
+            if (timeCompFilled){
+                removeTimeComplexity()
+                timeCompFilled = addTimeComplexity("N*log(N)","N*log(N)","N*log(N)")
+              }
+            else {
+                timeCompFilled = addTimeComplexity("N*log(N)","N*log(N)","N*log(N)")
+              }
             for (let i = 1 ; i <=50 ; i++ ){
                   array.push(i)
             }
@@ -18,7 +25,6 @@ var sketchMerge = function(p){
               array[i] = tmp
               
             }
-            p.frameRate(5)
             p.mergeSort(array,0,49)
 
         }
@@ -27,17 +33,20 @@ var sketchMerge = function(p){
     p.draw = function(){
                   p.clear()
                   for (let i = 0; i < 50; i++){
-                      if (array[i] == colored){
-                          p.fill("red")
-                          p.rect(barWidth*i,p.height - array[i]*2,barWidth,array[i]*2)
+                    if (array[i] == colored ){
+                        p.fill("red")
+                        p.rect(barWidth*i,p.height - array[i]*4,barWidth,array[i]*4)
+                        p.text(array[i],(barWidth*i),(p.height - array[i]*4)-5)
                       }
-                  else if (sorted){
+                      else if (sorted){
                           p.fill("green")
-                          p.rect(barWidth*i,p.height - array[i]*2,barWidth,array[i]*2)
+                          p.rect(barWidth*i,p.height - array[i]*4,barWidth,array[i]*4)
+                          p.text(array[i],(barWidth*i),(p.height - array[i]*4)-5)
                       }
                       else {
                           p.fill("grey")
-                          p.rect(barWidth*i,p.height - array[i]*2,barWidth,array[i]*2)
+                          p.rect(barWidth*i,p.height - array[i]*4,barWidth,array[i]*4)
+                          p.text(array[i],(barWidth*i),(p.height - array[i]*4)-5)
                       }
               }
         }
@@ -74,7 +83,7 @@ var sketchMerge = function(p){
                             let value = arr[start_second_array]
                             let index = start_second_array
                             while (index != l){
-                                await p.sleep(10)
+                                await p.sleep(100)
                                 arr[index] = arr[index - 1]
                                 index -= 1
                             }

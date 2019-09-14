@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p5.js example</title>
     <style> body {padding: 0; margin: 0;} </style>
+    <script src="descriptionTimeComp.js"></script>
     <script src="./library/p5.js"></script>
     <script src="./library/p5.dom.js"></script>
     <script src="./library/p5.sound.js"></script>
@@ -23,19 +24,27 @@
       <hr>
       <div id = "wrapper">
           <div id="AlgoSelector">
-              <button type = "button" onclick= "startBubble()">Bubble Sort</button>
+              <button type="button" class="button" onclick= "startBubble()">Bubble Sort</button>
               <div id= "divider"></div>
-              <button type ="button" onclick="startInsertion()">Insertion Sort</button>
+              <button type="button" class="button" onclick="startInsertion()">Insertion Sort</button>
               <div id= "divider"></div>
-              <button type ="button" onclick="startSelection()">Selection Sort</button>
+              <button type="button" class="button"  onclick="startSelection()">Selection Sort</button>
               <div id= "divider"></div>
-              <button type ="button" onclick="startMerge()">Merge Sort</button>
+              <button type="button" class="button"  onclick="startMerge()">Merge Sort</button>
               <div id= "divider"></div>
-              <button type ="button" onclick="startQuick()">Quick Sort</button>
+              <button type="button" class="button" onclick="startQuick()">Quick Sort</button>
           </div>
       </div>  
     </div>
       <div id="myCanvas"></div>
-      <div id = "complexixtyAnalysis"></div> <div id ="description"></div>
+      <div id = "complexixtyAnalysis">
+        <h4 id="timeCompTitle">Time complexities</h4>
+        <ul id="bestAverageWorst">
+        </ul>
+      </div>
+      <div id ="description">
+          <h4 id="descriptionTitle">Description</h4>
+      </div>
+    </div>
   </body>
 </html>

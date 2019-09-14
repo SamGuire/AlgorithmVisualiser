@@ -14,7 +14,9 @@ canvas {
     margin :auto auto;
 }
 #title {
-    margin-left: 5px;
+    text-shadow: 5px 2px 30px black;
+    font-size: 1em;
+    margin-left: 10px;
     width: 100%;
     margin-bottom: 5px;
 }
@@ -23,10 +25,28 @@ canvas {
 }
 
 #wrapper{
-    margin-left: 5px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    
 }
+ #timeCompTitle,#descriptionTitle{
+     margin:0px;
+     text-align: center;
+     border-bottom: 1px solid black;
+ }
 
+.button{
+    border:none;
+    background: green;
+    border-radius: 5px;
+    padding: 3px;
+    color: white;
+}
+.button:hover {
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.24), 0 2px 50px 0 rgba(0,0,0,0.19);
+  }
+.button:focus{
+    outline: none;
+}
 #divider {
     width: 30px;
     display: inline-block;
@@ -37,17 +57,26 @@ canvas {
     margin-top: 10px;
     border: 1px solid black;
     width: 30%;
-    height: 200px;
+    height: 190px;
+    vertical-align: top
 }
 #description{
+    margin-top: 10px;
     display: inline-block;
     border:1px solid black;
     width : 69%;
-    height : 200px;
+    height : 190px;
 }
 #myCanvas {
+    margin-top: 10px;
     height: 300px;
 }
 body {
-    background: #00ff55;
+  
+}
+
+#interval {
+
+    margin : 10px ;
+    
 }

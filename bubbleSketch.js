@@ -8,6 +8,13 @@ var sketchBubble = function(p){
       p.setup = function() {
               canvas = p.createCanvas(1000,300)
               canvas.parent("myCanvas")
+              if (timeCompFilled){
+                removeTimeComplexity()
+                timeCompFilled = addTimeComplexity("N","N^2","N^2")
+              }
+              else {
+                timeCompFilled = addTimeComplexity("N","N^2","N^2")
+              }
               for (let i = 1 ; i <=50 ; i++ ){
                     array.push(i)
               }
@@ -18,7 +25,7 @@ var sketchBubble = function(p){
                 array[i] = tmp
                 
               }
-              p.frameRate(100)
+              p.frameRate(20)
 
           }
 
@@ -44,22 +51,24 @@ var sketchBubble = function(p){
                       }
                       else {
                           sorted = true
-                          start = false
                           
                       }
                       p.clear()
                       for (let i = 0; i < 50; i++){
                         if (array[i] == value){
                           p.fill("red")
-                          p.rect(barWidth*i,p.height - array[i]*2,barWidth,array[i]*2)
+                          p.rect(barWidth*i,p.height - array[i]*4,barWidth,array[i]*4)
+                          p.text(array[i],(barWidth*i),(p.height - array[i]*4)-5)
                         }
                         else if (sorted){
                             p.fill("green")
-                            p.rect(barWidth*i,p.height - array[i]*2,barWidth,array[i]*2)
+                            p.rect(barWidth*i,p.height - array[i]*4,barWidth,array[i]*4)
+                            p.text(array[i],(barWidth*i),(p.height - array[i]*4)-5)
                         }
                         else {
                             p.fill("grey")
-                            p.rect(barWidth*i,p.height - array[i]*2,barWidth,array[i]*2)
+                            p.rect(barWidth*i,p.height - array[i]*4,barWidth,array[i]*4)
+                            p.text(array[i],(barWidth*i),(p.height - array[i]*4)-5)
                         }
                     }
                 }
@@ -73,4 +82,5 @@ function startBubble(){
     }
   }
   sortArray[0] = new p5(sketchBubble)
+ 
 }
