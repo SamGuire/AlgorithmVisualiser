@@ -17,6 +17,13 @@ var sketchInsertion = function(p){
               else {
                 timeCompFilled = addTimeComplexity("N","N^2","N^2")
               }
+              if (descriptionFilled){
+                removeDescription()
+                descriptionFilled = addDescription("Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.")
+              }
+              else {
+                descriptionFilled = addDescription("Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.")
+              }
               for (let i = 1 ; i <=50 ; i++ ){
                     array.push(i)
               }

@@ -27,16 +27,16 @@ function removeTimeComplexity(){
 }
 
 function addDescription(description){
-    let desc = document.getElementById("description")
-    paragraph = document.createElement("p")
+    let desc = document.getElementById("descriptionText")
     paraText = document.createTextNode(description)
-    paragraph.appendChild(paraText)
-    desc.appendChild(paragraph)
+    desc.appendChild(paraText)
     return true
 }
 
 function removeDescription(){
-    let desc = document.getElementById("description")
-    desc.removeChild(desc.firstChild)
+    let desc = document.getElementById("descriptionText")
+    while (desc.firstChild){
+        desc.removeChild(desc.firstChild)
+    }
     return false
 }

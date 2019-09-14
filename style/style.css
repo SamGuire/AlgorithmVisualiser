@@ -14,11 +14,18 @@ canvas {
     margin :auto auto;
 }
 #title {
+    display: inline;
     text-shadow: 5px 2px 30px black;
     font-size: 1em;
     margin-left: 10px;
-    width: 100%;
-    margin-bottom: 5px;
+}
+#rowSpacer {
+    margin-top: 5px;
+}
+#referenceWrapper {
+    display: inline;
+    margin-right: 10px;
+    float: right;
 }
 #AlgoSelector {
     display: inline-block;
@@ -33,6 +40,10 @@ canvas {
      text-align: center;
      border-bottom: 1px solid black;
  }
+
+#descriptionText {
+    margin-left: 5px;
+}
 
 .button{
     border:none;

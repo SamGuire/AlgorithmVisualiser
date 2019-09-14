@@ -12,9 +12,16 @@ var sketchSelection = function(p){
                 removeTimeComplexity()
                 timeCompFilled = addTimeComplexity("N^2","N^2","N^2")
               }
-              else {
-                timeCompFilled = addTimeComplexity("N^2","N^2","N^2")
-              }
+            else {
+            timeCompFilled = addTimeComplexity("N^2","N^2","N^2")
+            }
+        if (descriptionFilled){
+            removeDescription()
+            descriptionFilled = addDescription("The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning.")
+            }
+            else {
+            descriptionFilled = addDescription("The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning.")
+            }
             for (let i = 1 ; i <=50 ; i++ ){
                   array.push(i)
             }

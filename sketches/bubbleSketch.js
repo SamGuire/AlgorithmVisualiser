@@ -15,6 +15,13 @@ var sketchBubble = function(p){
               else {
                 timeCompFilled = addTimeComplexity("N","N^2","N^2")
               }
+              if (descriptionFilled){
+                removeDescription()
+                descriptionFilled = addDescription("Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.")
+              }
+              else {
+                descriptionFilled = addDescription("Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.")
+              }
               for (let i = 1 ; i <=50 ; i++ ){
                     array.push(i)
               }
