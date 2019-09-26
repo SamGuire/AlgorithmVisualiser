@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Visualiser</title>
     <style> body {padding: 0; margin: 0;} </style>
+    <script src="addRemove.js"></script>
     <script src="descriptionTimeComp.js"></script>
     <script src="./library/p5.js"></script>
     <script src="./library/p5.dom.js"></script>
@@ -15,12 +16,14 @@
     <script src="./sketches/selectionSketch.js"></script>
     <script src="./sketches/mergeSketch.js"></script>
     <script src="./sketches/quickSketch.js"></script>
+    <script src="./sketches/stackSketch.js"></script>
+    <script src="./sketches/queueSketch.js"></script>
     <script src="sketchChecker.js"></script>
     <script>
-        function startSketching(sortMethod){
+        function startSketching(Method){
           if (sketchPlaced){
             sketchPlaced.remove()
-            sketchPlaced = new p5(sortMethod)
+            sketchPlaced = new p5(Method)
           }
       }
   </script>
@@ -46,12 +49,16 @@
               <button type="button" class="button"  onclick="startSketching(sketchMerge)">Merge Sort</button>
               <div id= "divider"></div>
               <button type="button" class="button" onclick="startSketching(sketchQuick)">Quick Sort</button>
+              <div id= "divider"></div>
+              <button type="button" class="button" onclick="startSketching(sketchStack)">Stacks</button>
+              <div id= "divider"></div>
+              <button type="button" class="button" onclick="startSketching(sketchQueue)">Queues</button>
           </div>
       </div>  
     </div>
       <div id="myCanvas"></div>
-      <div id = "complexixtyAnalysis">
-        <h4 id="timeCompTitle">Time complexities</h4>
+      <div id = "complexityAnalysisOrButtons">
+        <h4 id="timeCompOrQuestion"></h4>
         <ul id="bestAverageWorst">
         </ul>
       </div>

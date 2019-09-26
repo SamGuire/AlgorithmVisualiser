@@ -35,10 +35,11 @@ canvas {
     margin-left: 10px;
     
 }
- #timeCompTitle,#descriptionTitle{
+ #timeCompOrQuestion,#descriptionTitle{
      margin:0px;
      text-align: center;
      border-bottom: 1px solid black;
+     height: 20px;
  }
 
 #descriptionText {
@@ -58,12 +59,23 @@ canvas {
 .button:focus{
     outline: none;
 }
+#addButton, #removeButton {
+    position: relative;
+    top : 50%;
+    left: 20%;
+    background: gray;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    margin: 15px;
+    width: 50%;
+}
 #divider {
     width: 30px;
     display: inline-block;
 }
 
-#complexixtyAnalysis {
+#complexityAnalysisOrButtons {
     display: inline-block;
     margin-top: 10px;
     border: 1px solid black;

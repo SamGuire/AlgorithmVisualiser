@@ -28,7 +28,7 @@ var sketchInsertion = function(p){
                     array.push(i)
               }
               for (let i = 0; i < 50 ; i++){
-                let randomNumber = Math.floor(Math.random()*10)
+                let randomNumber = Math.floor(Math.random()*50)
                 let tmp = array[randomNumber]
                 array[randomNumber] = array[i]
                 array[i] = tmp
