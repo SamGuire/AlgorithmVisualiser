@@ -59,7 +59,7 @@ canvas {
 .button:focus{
     outline: none;
 }
-#addButton, #removeButton {
+#addButton, #removeButton, #findPathButton, #findPathButtonDFS {
     position: relative;
     top : 50%;
     left: 20%;
@@ -82,6 +82,9 @@ canvas {
     width: 30%;
     height: 190px;
     vertical-align: top
+}
+#buttonContainer {
+   
 }
 #description{
     margin-top: 10px;

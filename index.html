@@ -6,6 +6,7 @@
     <title>Algorithm Visualiser</title>
     <style> body {padding: 0; margin: 0;} </style>
     <script src="addRemove.js"></script>
+    <script src = "findPathButton.js"></script>
     <script src="descriptionTimeComp.js"></script>
     <script src="./library/p5.js"></script>
     <script src="./library/p5.dom.js"></script>
@@ -18,7 +19,10 @@
     <script src="./sketches/quickSketch.js"></script>
     <script src="./sketches/stackSketch.js"></script>
     <script src="./sketches/queueSketch.js"></script>
+    <script src="./sketches/bfsSketch.js"></script>
     <script src="sketchChecker.js"></script>
+    <script src="./emptyGridOrArray.js"></script>
+    <script src = "./Queue.js"></script>
     <script>
         function startSketching(Method){
           if (sketchPlaced){
@@ -53,12 +57,15 @@
               <button type="button" class="button" onclick="startSketching(sketchStack)">Stacks</button>
               <div id= "divider"></div>
               <button type="button" class="button" onclick="startSketching(sketchQueue)">Queues</button>
+              <div id= "divider"></div>
+              <button type="button" class="button" onclick="startSketching(sketchBFS)">Breadth/Depth-First-Search</button>
           </div>
       </div>  
     </div>
       <div id="myCanvas"></div>
       <div id = "complexityAnalysisOrButtons">
         <h4 id="timeCompOrQuestion"></h4>
+        <div id = "buttonContainer"></div>
         <ul id="bestAverageWorst">
         </ul>
       </div>

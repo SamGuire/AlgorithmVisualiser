@@ -11,7 +11,7 @@ var sketchInsertion = function(p){
               canvas = p.createCanvas(1000,300)
               canvas.parent("myCanvas")
               if (timeCompFilled){
-                removeTimeComplexity()
+                p.removeTimeComplexity()
                 timeCompFilled = addTimeComplexity("N","N^2","N^2")
               }
               else {
@@ -19,10 +19,10 @@ var sketchInsertion = function(p){
               }
               if (descriptionFilled){
                 removeDescription()
-                descriptionFilled = addDescription("Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.")
+                descriptionFilled = addDescription("Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands. The lower part of the array is sorted and the element to be inserted in the sorted sub-array has to find its correct spot.")
               }
               else {
-                descriptionFilled = addDescription("Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.")
+                descriptionFilled = addDescription("Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.The lower part of the array is sorted and the element to be inserted in the sorted sub-array has to find its correct spot.")
               }
               for (let i = 1 ; i <=50 ; i++ ){
                     array.push(i)
@@ -34,9 +34,23 @@ var sketchInsertion = function(p){
                 array[i] = tmp
                 
               }
-              p.frameRate(20)
+              p.frameRate(30)
 
           }
+          p.removeTimeComplexity = function (){
+            let title = document.getElementById("timeCompOrQuestion")
+            title.innerHTML = ""
+            let unordered = document.getElementById("bestAverageWorst")
+            let container = document.getElementById("buttonContainer")
+            while (container.firstChild){
+              container.removeChild(container.firstChild)
+          }
+            while (unordered.firstChild){
+                unordered.removeChild(unordered.firstChild)
+            }
+            
+            return false
+        }
 
 
       p.draw = function(){

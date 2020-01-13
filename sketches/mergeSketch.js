@@ -9,7 +9,7 @@ var sketchMerge = function(p){
             canvas = p.createCanvas(1000,300)
             canvas.parent("myCanvas")
             if (timeCompFilled){
-                removeTimeComplexity()
+                p.removeTimeComplexity()
                 timeCompFilled = addTimeComplexity("N*log(N)","N*log(N)","N*log(N)")
               }
             else {
@@ -34,6 +34,20 @@ var sketchMerge = function(p){
             }
             p.mergeSort(array,0,49)
 
+        }
+        p.removeTimeComplexity = function (){
+            let title = document.getElementById("timeCompOrQuestion")
+            title.innerHTML = ""
+            let unordered = document.getElementById("bestAverageWorst")
+            let container = document.getElementById("buttonContainer")
+            while (container.firstChild){
+              container.removeChild(container.firstChild)
+          }
+            while (unordered.firstChild){
+                unordered.removeChild(unordered.firstChild)
+            }
+            
+            return false
         }
 
 
@@ -90,7 +104,7 @@ var sketchMerge = function(p){
                             let value = arr[start_second_array]
                             let index = start_second_array
                             while (index != l){
-                                await p.sleep(100)
+                                await p.sleep(50)
                                 arr[index] = arr[index - 1]
                                 index -= 1
                             }

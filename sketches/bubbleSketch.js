@@ -2,14 +2,15 @@
 var sketchBubble = function(p){
       let i = 0 
       let j = 49
-      let array = []
+      let array
       let sorted = false
       const barWidth = 1000/50
       p.setup = function() {
               canvas = p.createCanvas(1000,300)
               canvas.parent("myCanvas")
+              array = []
               if (timeCompFilled){
-                removeTimeComplexity()
+                p.removeTimeComplexity()
                 timeCompFilled = addTimeComplexity("N","N^2","N^2")
               }
               else {
@@ -32,9 +33,24 @@ var sketchBubble = function(p){
                 array[i] = tmp
                 
               }
-              p.frameRate(20)
+              p.frameRate(40)
 
           }
+        
+          p.removeTimeComplexity = function (){
+            let title = document.getElementById("timeCompOrQuestion")
+            title.innerHTML = ""
+            let unordered = document.getElementById("bestAverageWorst")
+            let container = document.getElementById("buttonContainer")
+            while (container.firstChild){
+              container.removeChild(container.firstChild)
+          }
+            while (unordered.firstChild){
+                unordered.removeChild(unordered.firstChild)
+            }
+            
+            return false
+        }
 
 
       p.draw = function(){

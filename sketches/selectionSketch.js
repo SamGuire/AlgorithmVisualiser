@@ -9,7 +9,7 @@ var sketchSelection = function(p){
             canvas = p.createCanvas(1000,300)
             canvas.parent("myCanvas")
             if (timeCompFilled){
-                removeTimeComplexity()
+                p.removeTimeComplexity()
                 timeCompFilled = addTimeComplexity("N^2","N^2","N^2")
               }
             else {
@@ -32,8 +32,22 @@ var sketchSelection = function(p){
               array[i] = tmp
               
             }
-            p.frameRate(20)
+            p.frameRate(50)
 
+        }
+        p.removeTimeComplexity = function (){
+            let title = document.getElementById("timeCompOrQuestion")
+            title.innerHTML = ""
+            let unordered = document.getElementById("bestAverageWorst")
+            let container = document.getElementById("buttonContainer")
+            while (container.firstChild){
+              container.removeChild(container.firstChild)
+          }
+            while (unordered.firstChild){
+                unordered.removeChild(unordered.firstChild)
+            }
+            
+            return false
         }
 
 

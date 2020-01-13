@@ -29,6 +29,7 @@ function removeTimeComplexity(){
     }
     addButton.remove()
     removeButton.remove()
+    findPathButton.remove();
     return false
 }
 
